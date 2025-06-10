@@ -1,5 +1,5 @@
-type Hash = Vec<u8>;
-type Address = String;
+pub type BlockHash = Vec<u8>;
+pub type Address = String;
 use std::time::{ SystemTime, UNIX_EPOCH };
 
 pub fn now () -> u128 {
@@ -76,3 +76,5 @@ pub fn difficulty_bytes_as_u128 (v: &Vec<u8>) -> u128 {
     ((v[17] as u128) << 0x1 * 8) |
     ((v[16] as u128) << 0x0 * 8)
 }
+
+
